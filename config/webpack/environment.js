@@ -9,7 +9,7 @@ require("jquery")
 environment.plugins.append(
 	"Provide",
 	new webpack.ProvidePlugin({
-		$: "query",
+		$: "jquery",
 		jQuery: "jquery",
 		jquery: "jquery",
 		"window.jQuery": "jquery",

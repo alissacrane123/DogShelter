@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     # get '/api/users/:id', to: 'api/users#show'
     resources :users, only: [:create, :show, :destroy, :index]
-    resource :sessions, only: [:create, :destroy, :show]
+    resource :session, only: [:create, :destroy, :show]
   end
 
   root "static_pages#index"
