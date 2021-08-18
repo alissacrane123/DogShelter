@@ -2,27 +2,20 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Session from '../components/home/session';
+import configureStore from "../redux/store/store"
+import Root from "../components/root";
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+document.addEventListener("DOMContentLoaded", () => {
+	const store = configureStore();
 
-Hello.defaultProps = {
-  name: 'David'
-}
+	window.getState = store.getState;
+	window.dispatch = store.dispatch;
 
-Hello.propTypes = {
-  name: PropTypes.string
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Session />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+	ReactDOM.render(
+		<Root store={store} />,
+		document.body.appendChild(document.createElement("div"))
+	);
+});

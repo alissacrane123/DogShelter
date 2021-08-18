@@ -10,7 +10,6 @@ const receiveUser = user => {
 
 
 export const loginUser = (user) =>  {
-
   return async (dispatch) => {
 
     try {
@@ -19,11 +18,8 @@ export const loginUser = (user) =>  {
         url: "/api/session",
         data: { user },
       })
-      // .then(res => console.log(res))
-
       dispatch(receiveUser(res))
   
-      // debugger
       console.log('login res', res)
     } catch (err) {
       console.log('login error', err)
