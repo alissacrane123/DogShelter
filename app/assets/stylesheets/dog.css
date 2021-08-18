@@ -1,0 +1,65 @@
+.dog-index {
+  display: flex;
+}
+
+.dog-list {
+  display: flex;
+}
+
+.dog-item {
+  display:flex;
+  flex-direction: column;
+  padding:20px;
+  background-color: black;
+  color:white;
+  border-radius: 5px;
+  /* align-items: center; */
+}
+
+.dog-item-img-cont {
+  height:200px;
+  width: 250px;
+  overflow: hidden;
+  display: flex;
+      border-radius: 5px;
+}
+
+.dog-item-img {
+  width:  100%;
+  object-fit: cover;
+}
+
+
+.dog-item-div {
+  align-items: center;
+  display: flex;
+  margin-top:5px;
+}
+
+.dog-item-h1 {
+  /* color: teal; */
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0 5px;
+    text-align: center;
+}
+
+.dog-item-h2 {
+    color: #bdbdbd;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.dog-item-label {
+    color:#bdbdbd;
+    font-size: 14px;
+}
+
+.location-svg, .paw-svg {
+  fill:#1acece;
+  height: 24px;
+  width: 24px;
+  margin-right:5px;
+  transform:scale(.8)
+  /* view-box:  */
+}

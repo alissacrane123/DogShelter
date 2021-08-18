@@ -1,14 +1,26 @@
 class Api::SessionsController < ApplicationController
 
   def create
-    @user = User.find_by_credentials(
-      params[:user][:email],
-      params[:user][:password]
-    )
 
-    if @user
+    if (params[:email])
+      @user = User.find_by_credentials(
+        params[:user][:email],
+        params[:user][:password]
+      )
+    else     
+      @user = Shelter.find_by_credentials(
+        params[:user][:username],
+        params[:user][:password]
+      )
+
+    end
+
+    if @user && params[:email]
       login(@user)
       render "api/users/show"
+    elsif @user
+      login(@user)
+      render "api/shelters/show"
     else
       render json: ["Invalid email/password combination"], status: 401
     end

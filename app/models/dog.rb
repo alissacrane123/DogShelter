@@ -4,7 +4,7 @@ class Dog < ApplicationRecord
   validates :name, presence: true
 
   belongs_to :user
-
+  belongs_to :shelter
 
   def capitalize_name
     name = self.name
