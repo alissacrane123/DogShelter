@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	window.getState = store.getState;
 	window.dispatch = store.dispatch;
-
+ 
 	ReactDOM.render(
 		<Root store={store} />,
 		document.body.appendChild(document.createElement("div"))

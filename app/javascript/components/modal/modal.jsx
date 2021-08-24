@@ -3,14 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Login from './login';
 import Signup from './signup';
+import DogProfile from './dogProfile';
+
 import { setModal } from "../../redux/actions/uiActions";
 
 
 const Modal = props => {
   const dispatch = useDispatch();
-  const { modal } = props;
+  let { modal } = props;
+
+  let items = modal.split('-');
+  modal = items[0]
 
   let component;
+
 
   switch (modal) {
     case 'login':
@@ -19,6 +25,11 @@ const Modal = props => {
     case 'signup':
       component = <Signup />;
       break;
+    case 'dog':
+      let dogId = items[1]
+      component = <DogProfile dogId={dogId}/>;
+      break
+    
     default:
       return null;
   }

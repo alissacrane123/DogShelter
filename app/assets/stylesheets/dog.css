@@ -1,5 +1,6 @@
 .dog-index {
   display: flex;
+  padding: 50px;
 }
 
 .dog-list {
@@ -14,6 +15,7 @@
   color:white;
   border-radius: 5px;
   /* align-items: center; */
+  cursor: pointer;
 }
 
 .dog-item-img-cont {
@@ -62,4 +64,114 @@
   margin-right:5px;
   transform:scale(.8)
   /* view-box:  */
+}
+
+.dog-profile {
+      width: 900px;
+    max-width: 85vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dog-profile-img-cont {
+      height: 300px;
+    width: 350px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+
+
+.dog-profile-info {
+  display: flex;
+      /* justify-content: center; */
+    /* margin-top: 15px; */
+    flex-direction: column;
+    padding:40px;
+    background-color: #1f2833;
+}
+
+.dog-profile-h1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 30px;
+    text-align: center;
+    color: #3be8e7;
+    letter-spacing: 1px;
+}
+
+.dog-profile-div {
+    align-items: center;
+    display: flex;
+    margin-bottom: 40px;
+    flex-direction: column;
+}
+.dog-profile-div:last-of-type {
+  margin-bottom:0px;
+}
+
+.dog-desc {
+  display:flex;
+  flex-direction: column;
+    /* max-width: 600px;
+    margin: 0px auto 0;
+        padding: 40px; */
+        margin-left:50px;
+        max-width: 600px;
+        padding: 40px;
+
+}
+
+.dog-desc-p {
+line-height: 20px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.dog-desc-p:first-of-type {
+  margin-top:0px;
+}
+
+.dog-profile-label {
+      color:#1acece;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dog-profile-p {
+      color:#bdbdbd;
+          /* color: #929292; */
+    font-size: 14px;
+}
+
+.dog-profile-top {
+      display: flex;
+    flex-direction: column;
+    background: black;
+    padding: 40px;
+}
+
+.dog-profile-bottom {
+  display:flex;
+   /* padding: 40px; */
+}
+
+.profile-buttons {
+  display:flex;
+      margin: 40px auto 0;
+}
+
+.dog-profile-button {
+    background-color: #286d74;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100px;
+    margin: 0 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
