@@ -1,0 +1,2 @@
+module Api::DogApplicationsHelper
+end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :destroy, :index]
     resources :shelters, only: [:create, :show, :destroy, :index]
     resources :dogs, only: [:create, :show, :destroy, :index]
+    resources :dog_applications, only: [:create, :show, :destroy, :index]
 
     resource :session, only: [:create, :destroy, :show]
   end

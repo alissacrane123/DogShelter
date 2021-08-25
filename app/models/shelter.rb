@@ -8,6 +8,7 @@ class Shelter < ApplicationRecord
   after_initialize :ensure_session_token
 
   has_many :dogs
+  has_many :dog_applications
 
   def self.find_by_credentials(username, password)
     user = Shelter.find_by(username: username)

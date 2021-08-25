@@ -1,0 +1,1 @@
+json.extract! @dog_app, :id, :user_id, :dog_id, :approved, :shelter_id

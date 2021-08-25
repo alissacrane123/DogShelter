@@ -1,1 +1,1 @@
-json.extract! dog, :id, :name, :age, :breed, :desc, :status, :user_id, :picture_url, :shelter_id
+json.extract! dog, :id, :name, :age, :breed, :gender, :desc, :status, :user_id, :picture_url, :shelter_id
